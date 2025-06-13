@@ -1,0 +1,10 @@
+true === false;
+5 == 2 + 4;
+4 * 5 == "20";
+3 * 2 === 6;
+Math.min(3, 4, 5) === 4;
+let mhairiName = "Mhairi";
+typeof mhairiName === "string";
+let mhairiAge = 28;
+let isMhairiOldEnoughToDrive = false;
+let kilometersMhairiDrivesToWork = 9.4;
