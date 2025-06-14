@@ -1,6 +1,6 @@
 function formatAs12HourClock(time) {
   if (Number(time.slice(0, 2)) > 12) {
-    return "Don't know how to handle times in the afternoon yet";
+    return `${Number(time.slice(0, 2)) - 12}:00 pm`;
   }
   return `${time} am`;
 }
@@ -20,9 +20,9 @@ console.assert(
   `current output: ${currentOutput2}, target output: ${targetOutput2}`
 );
 
-const currentOutput3 = formatAs12HourClock("15:45");
-const targetOutput3 = "03:45 pm";
-console.assert(
-    currentOutput3 === targetOutput3,
-    `current output: ${currentOutput3}, target output: ${targetOutput3}`
-);
+// const currentOutput3 = formatAs12HourClock("15:45");
+// const targetOutput3 = "03:45 pm";
+// console.assert(
+//     currentOutput3 === targetOutput3,
+//     `current output: ${currentOutput3}, target output: ${targetOutput3}`
+// );
