@@ -1,8 +1,13 @@
 function formatAs12HourClock(time) {
   let hours = Number(time.slice(0, 2));
-  if (hours > 12) {
+  keepTimeMinutes = time.slice(3,5)
+  if (hours > 12 &&  hours < 22) {
     hours = hours - 12;
-    keepTimeMinutes = time.slice(3,5)
+    return `0${hours}:${keepTimeMinutes} pm`
+  }
+  
+  else if(hours > 12) {
+    hours = hours - 12;
     return `${hours}:${keepTimeMinutes} pm`; 
   }
   return `${time} am`;
